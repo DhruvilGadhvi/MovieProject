@@ -30,11 +30,20 @@ $(document).ready(function () {
         //     $("#img" + index).attr('src', 'https://image.tmdb.org/t/p/w500/' + (response.movie_data[index].poster_path))
         // };
 
-
+        //sort data 
+        var array = [];
+        $.each(response,(index,value)=>{
+            array.push(value);
+            // console.log(value);
+        });
+        
+        array.sort(function(a,b){
+            return b.popularity - a.popularity;
+        });
         //Appending
-        $.each(response, function (index, value) {
-            console.log(value.title);
-            // console.log(value.popularity);
+        $.each(array, function (index, value) {
+            // console.log(value.title);
+            console.log(value.popularity);
             // console.log(value.overview);
 
             // var img=$(this).attr('src', 'https://image.tmdb.org/t/p/w500/' + (response.results[index].poster_path));
