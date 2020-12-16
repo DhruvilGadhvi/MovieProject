@@ -55,8 +55,10 @@ $(document).ready(function () {
                     <h1>'${value.title}'</h1>
                     <p>
                         '${value.overview}'
+                        <h5>Popularity:'${value.popularity}'</h5>
                     </p>
                 </div>
+                <h5>Popularity:'${value.popularity}'</h5>
             </div>`)
         });
     });
