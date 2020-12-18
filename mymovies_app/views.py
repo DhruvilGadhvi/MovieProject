@@ -52,10 +52,10 @@ def index(request):
     for i in movie_data:
         # print(i.movie_id)
         movie_info[i.movie_id]={
-            "poster_path":[i.poster_path],
-            "title":[i.title],
-            "overview":[i.overview],
-            "popularity":[i.popularity]
+            "poster_path":i.poster_path,
+            "title":i.title,
+            "overview":i.overview,
+            "popularity":i.popularity
         }
     context=json.dumps(movie_info,indent=2)
 
