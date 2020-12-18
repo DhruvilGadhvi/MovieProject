@@ -1,4 +1,3 @@
-{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -64,154 +63,82 @@
     <!--Navbar ends-->
 
     <!--Featured Today Starts-->
-    <!--Carousel Wrapper-->
     <h1 class="text-warning my-2 ml-4">Featured today</h1>
-    <div class="container-fluid my-4">
-        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-            <!--Indicators-->
-            <!--<ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
-                <li data-target="#multi-item-example" data-slide-to="2"></li>
-            </ol>-->
-            <!--/Indicators-->
-
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-
-
-                <!--First slide-->
-                <div class="carousel-item active">
-
-                    <div class="col-md-4" style="float:left">
-                        <div class="card mb-2" style="background-color:rgb(26,26,26);">
-                            <img class="card-img-top"
-                                src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title text-center" style="color:white;">Movie Title</h4>
-                                <p class="card-text" style="color:white;">Movie Overview:</p>
-                                <p class="card-text" style="color:white;">Movie Release date:</p>
-                                <!-- <a class="btn btn-warning">Button</a> -->
-                            </div>
-                        </div>
+    <!--row1 starts-->
+    <div class="container-fluid my-4 
+    ">
+        <div class="row row-cols-1 row-cols-md-3 g-4 ml-2 mr-2">
+            <div class="col mb-3">
+                <div class="card h-100" style="background-color:rgb(26,26,26);">
+                    <img src="https://mdbootstrap.com/img/new/standard/city/041.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body"> 
+                        <h5 class="card-title text-center" style="color:white;">Card title</h5>
+                        <p class="card-text" style="color:white;">
+                            Overview
+                        </p>
+                        <p class="card-text" style="color:white;">
+                            Release Date:
+                        </p>
+                        <p class="card-text" style="color:white;">
+                            Popularity
+                        </p>
                     </div>
                 </div>
-                <!--/First slide-->
             </div>
-            <!--/.Slides-->
-            <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a> -->
-        </div>
-    </div>
-    <!--/.Carousel Wrapper-->
-    <!--Featured Today Ends-->
-
-    <!--Fan favorites Start-->
-    <h1 class="text-warning my-2 ml-4">Fan favorites</h1>
-    <div class="container-fluid my-4">
-        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-            <!--Indicators-->
-            <!--<ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
-                <li data-target="#multi-item-example" data-slide-to="2"></li>
-            </ol>-->
-            <!--/Indicators-->
-
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-
-
-                <!--First slide-->
-                <div class="carousel-item active">
-
-                    <div class="col-md-2" style="float:left">
-                        <div class="card mb-2" style="background-color:rgb(26,26,26);">
-                            <img class="card-img-top"
-                                src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title text-center" style="color:white;">Movie Title</h4>
-                                <p class="card-text text-center" style="color:white;">Movie Rating:</p>
-                                <div class="col text-center">
-                                    <a class="btn btn-outline-secondary ">Watch Trailer</a>
-                                </div>
-                            </div>
-                        </div>
+            <!-- <div class="col">
+                <div class="card h-100" style="background-color:rgb(26,26,26);">
+                    <img src="https://mdbootstrap.com/img/new/standard/city/042.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:white;">Card title</h5>
+                        <p class="card-text" style="color:white;">This is a short card.</p>
                     </div>
                 </div>
-                <!--/First slide-->
             </div>
-            <!--/.Slides-->
-            <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a> -->
-        </div>
-    </div>
-    <!--Fan favoritess ends-->
-
-    <!--TV Shows & WebSeries Start-->
-    <h1 class="text-warning my-2 ml-4">TV Shows & WebSeries</h1>
-    <div class="container-fluid my-4">
-        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-            <!--Indicators-->
-            <!--<ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
-                <li data-target="#multi-item-example" data-slide-to="2"></li>
-            </ol>-->
-            <!--/Indicators-->
-
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-
-
-                <!--First slide-->
-                <div class="carousel-item active">
-
-                    <div class="col-md-3" style="float:left">
-                        <div class="card mb-2" style="background-color:rgb(26,26,26);">
-                            <img class="card-img-top"
-                                src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title" style="color:white;">Show Title</h4>
-                                <p class="card-text" style="color:white;">Show Rating:</p>
-                            </div>
-                        </div>
+            <div class="col">
+                <div class="card h-100" style="background-color:rgb(26,26,26);">
+                    <img src="https://mdbootstrap.com/img/new/standard/city/043.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:white;">Card title</h5>
+                        <p class="card-text" style="color:white;">
+                            This is a longer card with supporting text below as a natural lead-in to
+                            additional content.
+                        </p>
                     </div>
                 </div>
-                <!--/First slide-->
             </div>
-            <!--/.Slides-->
-            <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a> -->
+            <div class="col ">
+                <div class="card h-100" style="background-color:rgb(26,26,26);">
+                    <img src="https://mdbootstrap.com/img/new/standard/city/044.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:white;">Card title</h5>
+                        <p class="card-text" style="color:white;">
+                            This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="card h-100" style="background-color:rgb(26,26,26);">
+                    <img src="https://mdbootstrap.com/img/new/standard/city/044.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title" style="color:white;">Card title</h5>
+                        <p class="card-text" style="color:white;">
+                            This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
         </div>
     </div>
-    <!--TV Shows & WebSeries ends-->
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-5 g-4">
+    <!--row1 ends-->
+
+    <!--row2  starts-->
+    <!-- <div class="container-fluid m-4" > 
+        <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
                 <div class="card h-100" style="background-color:rgb(26,26,26);">
                     <img src="https://mdbootstrap.com/img/new/standard/city/041.jpg" class="card-img-top" alt="..." />
@@ -264,8 +191,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    
 
+    <!--row2  ends-->
     <!--footer starts-->
 
 
