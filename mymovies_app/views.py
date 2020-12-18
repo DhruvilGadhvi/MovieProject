@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Movie_Data
 from django.views.decorators.csrf import csrf_exempt
-import serializers
+
 
 
 @csrf_exempt
