@@ -4,11 +4,6 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Movie_Data
 from django.views.decorators.csrf import csrf_exempt
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/backend
-
 
 @csrf_exempt
 def index(request):
@@ -71,7 +66,7 @@ def searchbar(request):
         return render(request, 'index.html')
     search = request.GET.get('search')
     post = Movie_Data.objects.all().filter(title__startswith=search)
-
+    print(search)
     searched_movies = {}
     for i in post:
         searched_movies[i.movie_id] = {
