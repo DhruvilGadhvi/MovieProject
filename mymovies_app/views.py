@@ -10,7 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 def index(request):
     if request.method == 'GET':
-        return render(request, 'index.html')
+        return render(request, 'scam1.html')
 
     # save to data to database
     '''response = requests.get(

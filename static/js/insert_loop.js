@@ -50,33 +50,33 @@ $(document).ready(function () {
         });
 
         //search movie
-        var searchbar = document.getElementById("search");
-        // console.log(searchbar);
+        // var searchbar = document.getElementById("search");
+        // // console.log(searchbar);
 
-        searchbar.addEventListener('keyup', (e) => {
-            const searchstring = e.target.value;
-            console.log(searchstring);
-            const filteredchar = array.filter(character => {
-                // return character.title;
-                return character.title.includes(searchstring);
-            });
-            // console.log(filteredchar);
-            displaydata(filteredchar);
-            // $.each(filteredchar,(index,value)=>{
-            //     console.log(value);
-            //     $("#fil").append(`<div class="card card1">
-            //     <img src='https://image.tmdb.org/t/p/w500/${value.poster_path}' alt="No photo">
-            //     <div class="descriptions">
-            //         <h1>'${value.title}'</h1>
-            //         <p>
-            //             '${value.overview}'
-            //             <h5>Popularity:'${value.popularity}'</h5>
-            //         </p>
-            //     </div>
-            //     <h5>Popularity:'${value.popularity}'</h5>
-            // </div>`)
-            // })
-        });
+        // searchbar.addEventListener('keyup', (e) => {
+        //     const searchstring = e.target.value;
+        //     console.log(searchstring);
+        //     const filteredchar = array.filter(character => {
+        //         // return character.title;
+        //         return character.title.includes(searchstring);
+        //     });
+        //     // console.log(filteredchar);
+        //     displaydata(filteredchar);
+        //     // $.each(filteredchar,(index,value)=>{
+        //     //     console.log(value);
+        //     //     $("#fil").append(`<div class="card card1">
+        //     //     <img src='https://image.tmdb.org/t/p/w500/${value.poster_path}' alt="No photo">
+        //     //     <div class="descriptions">
+        //     //         <h1>'${value.title}'</h1>
+        //     //         <p>
+        //     //             '${value.overview}'
+        //     //             <h5>Popularity:'${value.popularity}'</h5>
+        //     //         </p>
+        //     //     </div>
+        //     //     <h5>Popularity:'${value.popularity}'</h5>
+        //     // </div>`)
+        //     // })
+        // });
 
 
 
@@ -85,23 +85,44 @@ $(document).ready(function () {
 
             //Appending
             $.each(char, function (index, value) {
-                // console.log(value);
+                console.log(value);
                 // console.log(value.popularity);
                 // console.log(value.overview);
 
                 // var img=$(this).attr('src', 'https://image.tmdb.org/t/p/w500/' + (response.results[index].poster_path));
                 // console.log(img[0])
                 // console.log(value.poster_path)
-                $("#input").append(`<div class="card card1">
-                <img src='https://image.tmdb.org/t/p/w500/${value.poster_path}' alt="No photo">
-                <div class="descriptions">
-                    <h1>'${value.title}'</h1>
-                    <p>
+                
+                //For index.html
+                //     $("#input").append(`<div class="card card1">
+                //     <img src='https://image.tmdb.org/t/p/w500/${value.poster_path}' alt="No photo">
+                //     <div class="descriptions">
+                //         <h1>'${value.title}'</h1>
+                //         <p>
+                //             '${value.overview}'
+                //             <h5>Popularity:'${value.popularity}'</h5>
+                //         </p>
+                //     </div>
+                //     <h5>Popularity:'${value.popularity}'</h5>
+                // </div>`)
+
+                //For scam1.html
+                $("#input").append(`<div class="col mb-3">
+                <div class="card h-100" style="background-color:rgb(26,26,26);">
+                    <img src="https://image.tmdb.org/t/p/w500/${value.poster_path}" class="card-img-top" alt="..." />
+                    <div class="card-body"> 
+                        <h5 class="card-title text-center" style="color:white;">'${value.title}'</h5>
+                        <p class="card-text" style="color:white;">
                         '${value.overview}'
-                        <h5>Popularity:'${value.popularity}'</h5>
-                    </p>
+                        </p>
+                        <p class="card-text" style="color:white;">
+                            Release Date:
+                        </p>
+                        <p class="card-text" style="color:white;">
+                        '${value.popularity}'
+                        </p>
+                    </div>
                 </div>
-                <h5>Popularity:'${value.popularity}'</h5>
             </div>`)
             });
         };
