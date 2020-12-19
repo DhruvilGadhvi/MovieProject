@@ -62,8 +62,8 @@ def index(request):
 
 
 def searchbar(request):
-    if request.method == 'GET':
-        return render(request, 'index.html')
+    # if request.method == 'GET':
+    #     return render(request, 'index.html')
     search = request.GET.get('search')
     post = Movie_Data.objects.all().filter(title__startswith=search)
     print(search)
