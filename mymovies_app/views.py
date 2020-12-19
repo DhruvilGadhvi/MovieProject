@@ -66,12 +66,9 @@ def searchbar(request):
     if request.method == 'GET':
         search = request.GET.get('search')
         post = Movie_Data.objects.all().filter(title__startswith=search)
-        # return render(request,'all_movies_app/index.html',{'post':post})
 
         searched_movies={}
-    
         for i in post:
-            # print(i.movie_id)
             searched_movies[i.movie_id]={
                 "poster_path":[i.poster_path],
                 "title":[i.title],
