@@ -4,7 +4,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Movie_Data
 from django.views.decorators.csrf import csrf_exempt
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/backend
 
 
 @csrf_exempt
@@ -45,10 +48,10 @@ def index(request):
     return HttpResponse("Hello")
     context = json.dumps(context.json(), indent=2)'''
 
-    #Fetch data from database
-    movie_data=Movie_Data.objects.all()
-    movie_info={}
-    
+    # Fetch data from database
+    movie_data = Movie_Data.objects.all()
+    movie_info = {}
+
     for i in movie_data:
         # print(i.movie_id)
         movie_info[i.movie_id]={
@@ -57,7 +60,25 @@ def index(request):
             "overview":i.overview,
             "popularity":i.popularity
         }
-    context=json.dumps(movie_info,indent=2)
+    context = json.dumps(movie_info, indent=2)
 
     # print(context)
+    return HttpResponse(context, content_type="application/json")
+
+
+def searchbar(request):
+    if request.method == 'GET':
+        return render(request, 'index.html')
+    search = request.GET.get('search')
+    post = Movie_Data.objects.all().filter(title__startswith=search)
+
+    searched_movies = {}
+    for i in post:
+        searched_movies[i.movie_id] = {
+            "poster_path": [i.poster_path],
+            "title": [i.title],
+            "overview": [i.overview],
+            "popularity": [i.popularity]
+        }
+    context = json.dumps(searched_movies, indent=2)
     return HttpResponse(context, content_type="application/json")
