@@ -75,5 +75,6 @@ def searchbar(request):
                 "overview":[i.overview],
                 "popularity":[i.popularity]
             }
+        context=json.dumps(searched_movies  ,indent=2)
         return HttpResponse(context, content_type="application/json")
 
