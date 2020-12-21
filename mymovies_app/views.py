@@ -45,7 +45,7 @@ def index(request):
     # }
     # context = json.dumps(context.json(), indent=2)
 
-    # Fetch data from database
+    # Fetch data from databases
     movie_data = Movie_Data.objects.all()
     movie_info = {}
 
