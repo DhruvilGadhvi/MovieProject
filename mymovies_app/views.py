@@ -9,7 +9,8 @@ import datetime
 @csrf_exempt
 def index(request):
     if request.method == 'GET':
-        return render(request, 'index.html')
+        return render(request, 'scam1.html')
+        #return render(request, 'index.html')
     if datetime.datetime.now().day % 2 != 0 :
         # print("odd")
         # save to data to database
