@@ -116,9 +116,6 @@ $(document).ready(function () {
                         '${value.overview}'
                         </p>
                         <p class="card-text" style="color:white;">
-                            Release Date:
-                        </p>
-                        <p class="card-text" style="color:white;">
                         '${value.popularity}'
                         </p>
                     </div>

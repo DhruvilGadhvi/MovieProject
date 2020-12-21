@@ -60,10 +60,10 @@ def index(request):
     # print(context)
     return HttpResponse(context, content_type="application/json")
 
-
+@csrf_exempt
 def searchbar(request):
-    # if request.method == 'GET':
-    #     return render(request, 'search_data.html')
+    if request.method == 'GET':
+        return render(request, 'search_data.html')
     search = request.GET.get('search')
     post = Movie_Data.objects.all().filter(title__startswith=search)
     print(search)
