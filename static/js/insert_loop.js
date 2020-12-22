@@ -109,7 +109,7 @@ $(document).ready(function () {
                 //For scam1.html
                 $("#input").append(`<div class="col mb-3" style="padding:3px;">
                 <div class="card h-100" style="background-color:rgb(26,26,26);">
-                    <img src="https://image.tmdb.org/t/p/w500/${value.poster_path}" class="card-img-top" style="height:40vh;" alt="..." />
+                    <img src="https://image.tmdb.org/t/p/w500/${value.poster_path}" class="card-img-top" style="height:25vh;" alt="..." />
                     <div class="card-body"> 
                         <h5 class="card-title text-center" style="color:white;">'${value.title}'</h5>
                         <p class="card-text" style="color:white;">
