@@ -42,12 +42,22 @@ $(document).ready(function () {
         var array = [];
         $.each(response, (index, value) => {
             array.push(value);
-            // console.log(value);
         });
 
         array.sort(function (a, b) {
             return b.popularity - a.popularity;
         });
+
+        //Moviename_array
+        movie_array = [];
+        $.each(response, (index, value) => {
+            movie_array.push(value.title);
+        });
+
+        $( "#search" ).autocomplete({
+            source: movie_array
+          });
+        console.log(movie_array);
 
         //search movie
         // var searchbar = document.getElementById("search");
@@ -81,18 +91,18 @@ $(document).ready(function () {
 
 
         const displaydata = (char) => {
-            console.log(char);
+            // console.log(char);
 
             //Appending
             $.each(char, function (index, value) {
-                console.log(value);
+                // console.log(value);
                 // console.log(value.popularity);
                 // console.log(value.overview);
 
                 // var img=$(this).attr('src', 'https://image.tmdb.org/t/p/w500/' + (response.results[index].poster_path));
                 // console.log(img[0])
                 // console.log(value.poster_path)
-                
+
                 //For index.html
                 //     $("#input").append(`<div class="card card1">
                 //     <img src='https://image.tmdb.org/t/p/w500/${value.poster_path}' alt="No photo">
